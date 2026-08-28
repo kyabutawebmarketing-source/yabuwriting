@@ -69,7 +69,15 @@ export async function POST(req: NextRequest) {
     });
   }
 
-  const client = new Anthropic();
+  const client = new Anthropic(
+    process.env.ANTHROPIC_WORKSPACE_ID
+      ? {
+          defaultHeaders: {
+            "anthropic-workspace-id": process.env.ANTHROPIC_WORKSPACE_ID,
+          },
+        }
+      : undefined,
+  );
   const encoder = new TextEncoder();
 
   const stream = new ReadableStream({

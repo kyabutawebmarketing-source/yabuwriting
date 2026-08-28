@@ -32,6 +32,7 @@ npm run dev
 | --- | --- | --- |
 | `ANTHROPIC_API_KEY` | ✅ | Claude APIキー |
 | `CLAUDE_MODEL` | - | 使用するモデルID（未設定時は `claude-opus-5`） |
+| `ANTHROPIC_WORKSPACE_ID` | 条件付き | 複数ワークスペースにまたがる個人／サービスアカウントキーを使う場合のみ必須。Consoleの「anthropic-workspace-id is required...」エラーが出た場合に設定する（Console の Settings > Workspaces の ID 列で確認）。特定ワークスペースに紐づくキーを発行すれば不要 |
 
 ## 技術構成
 
